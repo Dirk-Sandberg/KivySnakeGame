@@ -1,0 +1,31 @@
+#:import random random
+
+
+<SnakePart>:
+    size: 40, 40
+    canvas.before:
+        Color:
+            rgb: random.random(),random.random(),random.random()
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+
+GameScreen:
+    canvas.before:
+        Color:
+            rgb: 1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    Widget:
+        size: 40, 40
+        pos: 120, 120
+        id: food
+        canvas.before:
+            Color:
+                rgb: random.random(),random.random(),random.random()
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
